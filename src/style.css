@@ -21,6 +21,7 @@ body {
     text-align: center;
     padding: 40px 0;
     background-color: rgb(19, 21, 24);
+    border-bottom: 1px solid #e6e6e633;
 }
 
 .header h1 {
@@ -28,7 +29,12 @@ body {
 }
 
 .row-title {
-    margin: 2em 1.5em;
+    margin: 3em 1.5em 2em 1.5em;
+    width: 200px;
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #e6e6e633;
+    text-align: center;
 }
 
 .movies-grid {
