@@ -1,12 +1,9 @@
 import React from "react";
 
-export default function Header() {
+export const Header = () => {
     return (
-        <header>
-            <h1>Cinema Inf</h1>
-            <span className="tagline">
-                Brings you the Latest movies Information
-            </span>
-        </header>
+        <div className="header">
+            <h1>Movies Information</h1>
+        </div>
     );
-}
+};

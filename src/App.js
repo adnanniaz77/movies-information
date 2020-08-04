@@ -1,17 +1,12 @@
 import React from "react";
-import "./App.css";
-import Header from "./components/Header";
-import Search from "./components/Search";
-import MoviesGrid from "./components/MoviesGrid";
+import { Header } from "./components/Header";
+import "./style.css";
 
-function App() {
+export default function App() {
     return (
-        <div className="App">
+        <div className="container">
             <Header />
-            <Search />
-            <MoviesGrid />
+            <h1>Welcome</h1>
         </div>
     );
 }
-
-export default App;
