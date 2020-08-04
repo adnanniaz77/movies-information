@@ -24,17 +24,45 @@ body {
     border-bottom: 1px solid #e6e6e633;
 }
 
+.tagline {
+    font-size: 1.25rem;
+    letter-spacing: 5px;
+    word-spacing: 0.3em;
+}
+
 .header h1 {
     font-size: 3rem;
 }
 
+.select-label {
+    margin-right: 20px;
+}
+
+.select-list {
+    text-align: center;
+    padding: 1.75em 0;
+    background-color: rgb(100, 100, 100, 0.1);
+}
+
+.select-list select {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #999;
+    font-size: 18px;
+    color: #1c87c9;
+    border-radius: 5px;
+}
+
 .row-title {
     margin: 3em 1.5em 2em 1.5em;
-    width: 200px;
     display: block;
-    padding-bottom: 10px;
-    border-bottom: solid 1px #e6e6e633;
-    text-align: center;
+    border-bottom: 1px solid #e6e6e61c;
+    padding: 10px 15px;
+    background: linear-gradient(
+        to right,
+        rgba(200, 200, 200, 0.5),
+        transparent 40%
+    );
 }
 
 .movies-grid {
