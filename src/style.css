@@ -58,10 +58,11 @@ body {
     display: block;
     border-bottom: 1px solid #e6e6e61c;
     padding: 10px 15px;
+    border-radius: 10px 0 0 10px;
     background: linear-gradient(
         to right,
         rgba(200, 200, 200, 0.5),
-        transparent 40%
+        transparent 50%
     );
 }
 
