@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Visit App -> [Movies Information](https://angry-sinoussi-4f1473.netlify.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:
