@@ -17,7 +17,7 @@ export default function App() {
     console.log(selected);
 
     return (
-        <div className="container">
+        <div className="App-wrapper">
             <Header />
 
             <div className="select-list">
@@ -30,10 +30,10 @@ export default function App() {
                 </select>
             </div>
 
-            {selected === "playing-now" ? <PlayingNow /> : ""}
-            {selected === "upcoming" ? <Upcoming /> : ""}
-            {selected === "popular" ? <Popular /> : ""}
-            {selected === "top-rated" ? <TopRated /> : ""}
+            {selected === "playing-now" && <PlayingNow />}
+            {selected === "upcoming" && <Upcoming />}
+            {selected === "popular" && <Popular />}
+            {selected === "top-rated" && <TopRated />}
         </div>
     );
 }
