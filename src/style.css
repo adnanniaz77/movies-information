@@ -60,7 +60,7 @@ body {
 .row-title {
     margin: 3em 1.5em 2em 1.5em;
     display: block;
-    border-bottom: 1px solid #e6e6e61c;
+    /* border-bottom: 1px solid #e6e6e61c; */
     padding: 10px 15px;
     border-radius: 10px 0 0 10px;
     background: linear-gradient(
@@ -89,7 +89,6 @@ body {
 
 .img-container {
     position: relative;
-    cursor: pointer;
 }
 
 .movie-info {
@@ -103,7 +102,7 @@ body {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     z-index: 1;
@@ -161,5 +160,13 @@ body {
 @media (max-width: 600px) {
     .movies-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .label {
+        font-size: 0.6rem;
+    }
+
+    .overview {
+        display: none;
     }
 }
