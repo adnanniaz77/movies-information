@@ -1,6 +1,6 @@
 # Movies Information App
 
-### **View the Live:** [Movies Information](https://movies-inf.netlify.app/)
+**View the Live:** [Movies Information](https://movies-inf.netlify.app/)
 
 ## About the App
 
