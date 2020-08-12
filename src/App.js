@@ -5,6 +5,7 @@ import PlayingNow from "./components/PlayingNow";
 import TopRated from "./components/TopRated";
 import Upcoming from "./components/Upcoming";
 import Popular from "./components/Popular";
+import Modal from "./components/Modal";
 
 export default function App() {
     const [selected, setSelected] = useState("playing-now");
@@ -22,6 +23,7 @@ export default function App() {
 
             <div className="select-list">
                 <label className="select-label">Select Category:</label>
+
                 <select onChange={handleChange}>
                     <option value="playing-now">Playing Now</option>
                     <option value="top-rated">Top Rated Movies</option>
@@ -34,6 +36,8 @@ export default function App() {
             {selected === "upcoming" && <Upcoming />}
             {selected === "popular" && <Popular />}
             {selected === "top-rated" && <TopRated />}
+
+            {/* <Modal /> */}
         </div>
     );
 }
