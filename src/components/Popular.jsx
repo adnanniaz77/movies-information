@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
 import useApi from "../tmdb/useApi";
+import Modal from "./Modal";
 
 function Popular() {
-    const imgUrl = `https://image.tmdb.org/t/p/original`;
     const { apiData } = useApi("popular");
+
+    const [selectedImg, setSelectedImg] = useState(null);
+    const [title, setTitle] = useState(null);
+    const [overview, setOverview] = useState(null);
+
+    const imgUrl = `https://image.tmdb.org/t/p/original`;
 
     return (
         <>
-            <h2 className="row-title">Popular Movies</h2>
+            <h2 className="row-title">Popular</h2>
 
             <div className="movies-grid">
                 {apiData.map((movie) => (
@@ -16,26 +22,24 @@ function Popular() {
                             <img
                                 className="poster"
                                 src={imgUrl + movie.poster_path}
+                                onClick={() => {
+                                    setSelectedImg(imgUrl + movie.poster_path);
+                                    setTitle(movie.title);
+                                    setOverview(movie.overview);
+                                }}
                                 alt=""
                             />
-                            <div className="movie-info">
-                                <span className="title">{movie.title}</span>
-                                <span className="release_date yellow">
-                                    <i className="fa fa-calendar"></i>
-                                    {movie.release_date.slice(0, 4)}
-                                </span>
-                                <span className="popularity yellow">
-                                    <i className="fa fa-line-chart"></i>
-                                    {movie.popularity}
-                                </span>
-                                <p className="overview yellow">
-                                    {movie.overview.slice(0, 150)}
-                                </p>
-                            </div>
                         </div>
                     </div>
                 ))}
             </div>
+
+            <Modal
+                selectedImg={selectedImg}
+                setSelectedImg={setSelectedImg}
+                title={title}
+                overview={overview}
+            />
         </>
     );
 }

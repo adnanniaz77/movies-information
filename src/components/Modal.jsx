@@ -1,8 +1,12 @@
 import React from "react";
 
-export default function Modal({ selectedImg, setSelectedImg }) {
+export default function Modal({
+    selectedImg,
+    setSelectedImg,
+    title,
+    overview,
+}) {
     const handleClick = (e) => {
-        console.log(e.target.classList);
         e.target.classList.contains("backdrop") && setSelectedImg(null);
     };
 
@@ -10,6 +14,10 @@ export default function Modal({ selectedImg, setSelectedImg }) {
         <div>
             {selectedImg && (
                 <div className="backdrop" onClick={handleClick}>
+                    <div className="movie-info">
+                        <h3 className="title">{title}</h3>
+                        <p className="overview">{overview}</p>
+                    </div>
                     <img src={selectedImg} alt="" />
                 </div>
             )}
