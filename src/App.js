@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Header } from "./components/Header";
 import "./style.css";
 import PlayingNow from "./components/PlayingNow";
@@ -18,7 +18,11 @@ export default function App() {
             <Header />
             <div className="select-list">
                 <Search apiResult={apiResult} setApiResult={setApiResult} />
-                <OptionList selected={selected} setSelected={setSelected} />
+                <OptionList
+                    selected={selected}
+                    setSelected={setSelected}
+                    apiResult={apiResult}
+                />
             </div>
 
             <SearchResult apiResult={apiResult} />

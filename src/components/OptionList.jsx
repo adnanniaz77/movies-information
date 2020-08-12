@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function OptionList({ setSelected }) {
+export default function OptionList({ setSelected, apiResult }) {
     const handleChange = (e) => {
         setSelected(e.target.value);
     };
