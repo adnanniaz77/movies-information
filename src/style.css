@@ -40,6 +40,7 @@ body {
 
 .select-label {
     margin-right: 20px;
+    font-size: 1.3rem;
 }
 
 .select-list {
@@ -60,7 +61,6 @@ body {
 .row-title {
     margin: 3em 1.5em 2em 1.5em;
     display: block;
-    /* border-bottom: 1px solid #e6e6e61c; */
     padding: 10px 15px;
     border-radius: 10px 0 0 10px;
     background: linear-gradient(
@@ -92,23 +92,6 @@ body {
     position: relative;
 }
 
-/* .movie-info {
-    position: absolute;
-    transition: all ease 0.5s;
-    height: 100%;
-    background: rgba(10, 10, 10, 0.9);
-    padding: 20px;
-    top: 0;
-    opacity: 0;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    z-index: 1;
-} */
-
 .fa {
     margin-right: 10px;
 }
@@ -122,11 +105,6 @@ body {
     display: block;
     text-align: justify;
 }
-
-/* .img-container:hover > .movie-info {
-    opacity: 1;
-    transition: all ease 0.3s;
-} */
 
 .info-container {
     border: solid 1px red;
@@ -165,6 +143,29 @@ body {
     margin-bottom: 10px;
 }
 
+.select-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.search-label {
+    font-size: 1.3rem;
+    margin-right: 20px;
+}
+
+.search-input {
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 250px;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
 @media (max-width: 1200px) {
     .movies-grid {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -190,5 +191,13 @@ body {
 
     .label {
         font-size: 0.6rem;
+    }
+
+    .select-list {
+        flex-direction: column;
+    }
+
+    .search-input {
+        margin-bottom: 20px;
     }
 }

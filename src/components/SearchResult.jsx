@@ -1,29 +1,32 @@
-import React, { useState } from "react";
-import useApi from "../tmdb/useApi";
+import React, { useState, useEffect } from "react";
 import Modal from "./Modal";
 
-function Upcoming() {
-    const { apiData } = useApi("upcoming");
+function SearchResult({ apiResult }) {
+    const imgUrl = `https://image.tmdb.org/t/p/original`;
 
     const [selectedImg, setSelectedImg] = useState(null);
     const [title, setTitle] = useState(null);
     const [overview, setOverview] = useState(null);
 
-    const imgUrl = `https://image.tmdb.org/t/p/original`;
-
     return (
         <>
-            <h2 className="row-title">Upcoming</h2>
-
             <div className="movies-grid">
-                {apiData.map((movie) => (
+                {apiResult.map((movie) => (
                     <div className="movies-wrapper" key={movie.id}>
                         <div className="img-container">
                             <img
                                 className="poster"
-                                src={imgUrl + movie.poster_path}
+                                src={
+                                    movie.poster_path === null
+                                        ? `/images/placeholder.jpg`
+                                        : imgUrl + movie.poster_path
+                                }
                                 onClick={() => {
-                                    setSelectedImg(imgUrl + movie.poster_path);
+                                    setSelectedImg(
+                                        movie.poster_path === null
+                                            ? "https://drive.google.com/file/d/1bK_E_uw195FN4Kaw1vi9wdejH9hujtU3/view?usp=sharing"
+                                            : imgUrl + movie.poster_path
+                                    );
                                     setTitle(movie.title);
                                     setOverview(movie.overview);
                                 }}
@@ -33,7 +36,6 @@ function Upcoming() {
                     </div>
                 ))}
             </div>
-
             <Modal
                 selectedImg={selectedImg}
                 setSelectedImg={setSelectedImg}
@@ -44,4 +46,4 @@ function Upcoming() {
     );
 }
 
-export default Upcoming;
+export default SearchResult;
