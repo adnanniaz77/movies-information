@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useApi from "../tmdb/useApi";
 import Modal from "./Modal";
 
-function PlayingNow() {
+function PlayingNow({ selected }) {
     const { apiData } = useApi("now_playing");
 
     const [selectedImg, setSelectedImg] = useState(null);
@@ -39,6 +39,7 @@ function PlayingNow() {
                 setSelectedImg={setSelectedImg}
                 title={title}
                 overview={overview}
+                selected={selected}
             />
         </>
     );

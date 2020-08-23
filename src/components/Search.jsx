@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function Search({ setApiResult }) {
+export default function Search({ setApiResult, setSelected }) {
     const [search, setSearch] = useState("");
 
     const apiKey = "22e7c1bb96e31278c7328fa9a52b5bad";
@@ -17,6 +17,8 @@ export default function Search({ setApiResult }) {
         const result = await axios.get(searchUrl);
         setApiResult(result.data.results);
         setSearch("");
+
+        setSelected(null); // set selected category to null
     };
 
     return (

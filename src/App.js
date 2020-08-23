@@ -17,7 +17,11 @@ export default function App() {
         <div className="App-wrapper">
             <Header />
             <div className="select-list">
-                <Search apiResult={apiResult} setApiResult={setApiResult} />
+                <Search
+                    apiResult={apiResult}
+                    setApiResult={setApiResult}
+                    setSelected={setSelected}
+                />
                 <OptionList
                     selected={selected}
                     setSelected={setSelected}

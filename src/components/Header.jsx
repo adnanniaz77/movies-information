@@ -3,8 +3,14 @@ import React from "react";
 export const Header = () => {
     return (
         <div className="header">
-            <h1>Movies Information</h1>
-            <span className="tagline">Browse Movies Information</span>
+            <h1>
+                <a href="/" style={{ color: "#fff" }}>
+                    Movies Information
+                </a>
+            </h1>
+            <a href="/" style={{ color: "#fff", textDecoration: "none" }}>
+                <span className="tagline">Browse Movies Information</span>
+            </a>
         </div>
     );
 };

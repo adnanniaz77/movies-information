@@ -10,6 +10,17 @@ export default function Modal({
         e.target.classList.contains("backdrop") && setSelectedImg(null);
     };
 
+    // Disable and Enable scrolling
+    if (selectedImg) {
+        var x = window.scrollX;
+        var y = window.scrollY;
+        window.onscroll = function () {
+            window.scrollTo(x, y);
+        };
+    } else {
+        window.onscroll = function () {};
+    }
+
     return (
         <div>
             {selectedImg && (
